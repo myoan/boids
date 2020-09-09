@@ -152,10 +152,11 @@ export class Bird
         */
 
         const localCenter = this.cood.convertToLocal(center);
+        this.v += 1;
         if (localCenter.y > 0) {
-            this.cood.rotate(5);
+            this.cood.rotate(3);
         } else {
-            this.cood.rotate(-5);
+            this.cood.rotate(-3);
         }
     }
 
@@ -177,6 +178,7 @@ export class Bird
         */
 
         const localCenter = this.cood.convertToLocal(center);
+        this.v -= 1;
         if (localCenter.y > 0) {
             this.cood.rotate(-10);
         } else {
@@ -208,9 +210,9 @@ export class Bird
 
         const localAve = this.cood.convertToLocal(aveDir);
         if (localAve.y > 0) {
-            this.cood.rotate(5);
+            this.cood.rotate(3);
         } else {
-            this.cood.rotate(-5);
+            this.cood.rotate(-3);
         }
    }
 
